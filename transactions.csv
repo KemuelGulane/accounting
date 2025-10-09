@@ -1,0 +1,4 @@
+Date,Description,Debit,Credit,Amount
+2025-06-27,Construction Materials,Utilities Expense [EXPENSE],Accounts Payable [LIABILITY],30000
+2025-10-10,Money,Cash [ASSET],Utilities Expense [EXPENSE],45000
+2025-10-10,Laptop,Cash [ASSET],Cost of Goods Sold [EXPENSE],29561

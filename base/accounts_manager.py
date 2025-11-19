@@ -85,13 +85,10 @@ class AccountsManager:
         }
         
         balances = self.calculate_account_balances()
-        
-        # Show ALL accounts, even those with zero balances
         for account_name, account_type in self.account_types.items():
             balance = balances.get(account_name, 0.0)
             normal_balance = self.get_normal_balance(account_name)
             
-            # For accounts with credit normal balance, show positive balance as credit
             if normal_balance == "Credit" and balance < 0:
                 balance = abs(balance)
                 balance_type = "Credit"
@@ -110,14 +107,12 @@ class AccountsManager:
                 "normal_balance": normal_balance
             })
         
-        # Sort accounts within each type alphabetically
         for account_type in accounts_by_type:
             accounts_by_type[account_type].sort(key=lambda x: x['name'])
         
         return accounts_by_type
 
     def get_total_by_type(self, account_type):
-        """Get total balance for a specific account type"""
         accounts = self.get_accounts_by_type().get(account_type, [])
         total = 0.0
         
@@ -130,7 +125,6 @@ class AccountsManager:
         return abs(total)
 
     def get_all_accounts_summary(self):
-        """Get summary of all accounts with totals"""
         accounts_by_type = self.get_accounts_by_type()
         summary = {}
         

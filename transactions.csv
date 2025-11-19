@@ -1,4 +1,9 @@
 Date,Description,Debit,Credit,Amount
-2025-06-27,Construction Materials,Utilities Expense [EXPENSE],Accounts Payable [LIABILITY],30000
 2025-10-10,Money,Cash [ASSET],Utilities Expense [EXPENSE],45000
 2025-10-10,Laptop,Cash [ASSET],Cost of Goods Sold [EXPENSE],29561
+2025-10-10,Iphone 18,Equipment [ASSET],Cash [ASSET],96000
+2024-05-14,Ayan,Utilities Expense [EXPENSE],Rent Expense [EXPENSE],67000
+2025-10-01,Customer Service,Accounts Receivable [ASSET],Cost of Goods Sold [EXPENSE],500
+2025-10-02,Cash Payment 90%,Sales Revenue [INCOME],Accounts Receivable [ASSET],400
+2025-11-19,Chris Dezen Lauro,Cash [ASSET],Cost of Goods Sold [EXPENSE],200000
+2025-11-19,ICE CREAM PINIPIG,Cash [ASSET],Inventory [ASSET],70

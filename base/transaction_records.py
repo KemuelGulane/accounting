@@ -11,17 +11,15 @@ if not os.path.exists(FILENAME):
 def add_transaction(date, description, debit, credit, amount):
     """Add one transaction to the CSV file."""
     try:
-        # Validate inputs
+
         if not all([date, description, debit, credit, amount]):
             raise ValueError("All fields are required")
-        
-        # Validate date format
+
         try:
             datetime.strptime(date, '%Y-%m-%d')
         except ValueError:
             raise ValueError("Date must be in YYYY-MM-DD format")
-        
-        # Validate amount
+
         try:
             float(amount)
         except ValueError:
@@ -46,7 +44,6 @@ def get_all_transactions():
             reader = csv.DictReader(file)
             transactions = []
             for row in reader:
-                # Validate row has all required fields
                 if all(key in row for key in ["Date", "Description", "Debit", "Credit", "Amount"]):
                     transactions.append(row)
                 else:
